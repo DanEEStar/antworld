@@ -70,5 +70,8 @@ class AntWorldPhysics extends Phaser.Plugin
     if @numApplesFeed >= @numApplesNeededToFeed
       console.log('you win!!')
       setTimeout(() =>
-        @game.state.start('GameState', true, false, @antWorld.level + 1)
+        if @antWorld.level >= 5
+          @game.state.start('WinState')
+        else
+          @game.state.start('GameState', true, false, @antWorld.level + 1)
       , 2000)

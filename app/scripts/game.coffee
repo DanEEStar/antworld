@@ -36,9 +36,6 @@ class GameState extends Phaser.State
 
 
 class TitleState extends Phaser.State
-  preload: () ->
-    @game.load.image('title', 'images/title.png')
-
   create: () ->
     @game.add.image(0, 0, 'title')
 
@@ -65,9 +62,22 @@ class PreloaderState extends Phaser.State
     @game.load.image('button_cyan', 'images/button_cyan.png')
     @game.load.image('button_brown', 'images/button_brown.png')
     @game.load.image('apple', 'images/apple.png')
+    @game.load.image('title', 'images/title.png')
 
   create: () ->
     @game.state.start('TitleState')
+
+
+class WinState extends Phaser.State
+  create: () ->
+    @game.add.image(0, 0, 'title')
+
+    style = { font: "75px Thirteen Pixel Fonts Regular", fill: "", align: "center" };
+    startText = @game.add.text(400, 200, 'You win!!!\nGod save the Queen!', style)
+    startText.anchor.x = 0.5
+    startText.inputEnabled = true
+    startText.events.onInputDown.add(() =>
+      @game.state.start('TitleState', true, false, 1))
 
 
 class Game extends Phaser.Game
@@ -77,6 +87,7 @@ class Game extends Phaser.Game
     @state.add('PreloaderState', PreloaderState, false)
     @state.add('TitleState', TitleState, false)
     @state.add('GameState', GameState, false)
+    @state.add('WinState', WinState, false)
 
     @state.start('PreloaderState')
 
