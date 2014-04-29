@@ -82,7 +82,7 @@ class WinState extends Phaser.State
 
 class Game extends Phaser.Game
   constructor: () ->
-    super(800, 600, Phaser.AUTO, 'content', null);
+    super(800, 600, Phaser.AUTO, 'gameContainer', null);
 
     @state.add('PreloaderState', PreloaderState, false)
     @state.add('TitleState', TitleState, false)

@@ -1,4 +1,10 @@
 body {
-  margin-top: 10px;
-  margin-left: 10px;
+  font-family: "Thirteen Pixel Fonts Regular";
+  text-align: center;
+  background: rgb(127, 164, 51);
+}
+
+#gameContainer {
+  width: 800px;
+  margin: 10px auto;
 }
