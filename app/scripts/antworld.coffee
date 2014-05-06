@@ -12,9 +12,9 @@ class TouchOperationSelector
     tileSelector.add(tileSelectorBackground)
     tileSelector.fixedToCamera = true
 
-    marker = @game.add.graphics();
-    marker.lineStyle(4, 0xff0000, 1);
-    marker.drawRect(2, 2, 44, 44);
+    marker = @game.add.graphics()
+    marker.lineStyle(4, 0xff0000, 1)
+    marker.drawRect(2, 2, 44, 44)
     marker.x = 48
 
     buttonBrown = tileSelector.create(2, 2, 'button_brown')
@@ -38,9 +38,9 @@ class AntWorldCreator
 
   @loadFromImage: (game, imgKey, level) ->
     img = game.cache.getImage(imgKey)
-    canvas = document.createElement('canvas');
-    canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
-    pixelData = canvas.getContext('2d').getImageData(0, 0, img.width, img.height).data;
+    canvas = document.createElement('canvas')
+    canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height)
+    pixelData = canvas.getContext('2d').getImageData(0, 0, img.width, img.height).data
 
     antWorld = new AntWorld(game, level)
 
@@ -109,8 +109,8 @@ class AntWorld
 
   constructor: (@game, @level, @tileSize=4) ->
     @currentColor = clearColor
-    @width = 800 / @tileSize;
-    @height = 600 / @tileSize;
+    @width = 800 / @tileSize
+    @height = 600 / @tileSize
 
     @_initData()
 

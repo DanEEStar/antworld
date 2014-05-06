@@ -22,6 +22,7 @@ class GameState extends Phaser.State
     @game.load.image(@levelText, "images/#{@levelText}.png")
 
   create: () ->
+    @game.time.advancedTiming = true
     @cursors = @game.input.keyboard.createCursorKeys();
     @antWorld = AntWorldCreator.loadFromImage(@game, @levelText, @level)
 
@@ -33,6 +34,7 @@ class GameState extends Phaser.State
 
   render: () ->
     @antWorld.render()
+    @game.debug.text("fps: #{@game.time.fps}", 10, 20);
 
 
 class TitleState extends Phaser.State
