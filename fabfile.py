@@ -20,6 +20,8 @@ def deploy(restart=False):
     """
     use deploy:restart=true to also restart nginx server
     """
+
+    # FIXME: not working anymore with the new build
     sudo('mkdir -p %(remote_app)s' % env)
     rsync_project(
         remote_dir=env.remote_app,

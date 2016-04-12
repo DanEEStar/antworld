@@ -9,19 +9,8 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-        <link rel="stylesheet" href="styles/thirteen_pixel_fonts/thirteen_pixel_fonts.css">
-
-        <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+        <link rel="stylesheet" href="app/styles/thirteen_pixel_fonts/thirteen_pixel_fonts.css">
+        <link rel="stylesheet" href="app/styles/main.css">
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -29,7 +18,6 @@
         <![endif]-->
 
         <div id="gameContainer">
-
         </div>
 
         <div id="information">
@@ -48,16 +36,8 @@
             ga('send', 'pageview');
         </script>
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/phaser-official/build/phaser.js"></script>
-        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/app.js -->
-        <script src="scripts/app.js"></script>
-        <!-- endbuild -->
+        <script src="node_modules/phaser/dist/phaser.js"></script>
+        <script src="node_modules/lodash/lodash.js"></script>
+        <script src="bundle.js"></script>
 </body>
 </html>

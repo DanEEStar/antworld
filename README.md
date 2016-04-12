@@ -13,4 +13,13 @@ A video youtube video of [gameplay](https://www.youtube.com/watch?v=84adyv99mJI)
 
 Programmed in CoffeeScript using the [Phaser](http://phaser.io/) game framework.
 
-It uses [gulp.js](http://gulpjs.com/) as the build tool.
+To start dev server:
+
+```
+# install all dependencies
+npm install
+
+# compile coffeescript and start dev server
+npm start
+```
+

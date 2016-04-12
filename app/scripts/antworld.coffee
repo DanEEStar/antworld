@@ -4,8 +4,8 @@ stoneColor1 = '#a0a0a0'
 
 class TouchOperationSelector
   constructor: (@game, @antWorld) ->
-    tileSelector = game.add.group()
-    tileSelectorBackground = game.make.graphics()
+    tileSelector = @game.add.group()
+    tileSelectorBackground = @game.make.graphics()
     tileSelectorBackground.beginFill(0x000000, 0.7)
     tileSelectorBackground.drawRect(0, 0, 96, 48)
     tileSelectorBackground.endFill()
