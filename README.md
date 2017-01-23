@@ -3,7 +3,7 @@ Ant World
 
 My game for the Ludum Dare 29 game jam.
 
-Playable online at [http://ld29.wurstliga.ch/](http://ld29.wurstliga.ch/])
+Playable online at [http://ld29.danielegger.ch/](http://ld29.danielegger.ch/])
 
 The official [Ludum Dare entry](http://www.ludumdare.com/compo/ludum-dare-29/?action=preview&uid=12823)
 
